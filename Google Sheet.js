@@ -8,8 +8,8 @@ form.addEventListener('submit', e => {
     .then(response => {
       Swal.fire({
         icon: 'success',
-        title: 'Thank you!',
-        text: 'Your form has been submitted successfully.',
+        title: 'Terima Kasih',
+        text: 'Data anda kami simpan',
       }).then(() => {
         window.location.reload();
       });
@@ -19,7 +19,7 @@ form.addEventListener('submit', e => {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Something went wrong! Please try again.',
+        text: 'Sepertinya ada masalah',
       });
     });
 });
