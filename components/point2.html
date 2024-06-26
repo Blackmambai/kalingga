@@ -47,19 +47,19 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-    <style>
-       body::-webkit-scrollbar {
-         width: 0.5em;
-         z-index: 100;
-         background-color:transparent;
-       }
+    <!-- Google tag (gtag.js) -->
 
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-TD2FT5TDTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      body::-webkit-scrollbar-thumb {
-         background-color:white;
-         box-shadow:0 -100vh 0 100vh #5128f5;//magic
-       }
-    </style>
+      gtag('config', 'G-TD2FT5TDTT');
+    </script>
   </head>
   <body>
     <link rel="stylesheet" href="../style.css" />
@@ -91,5 +91,16 @@
         </div>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://www.googletagmanager.com/gtag/js?id=G-TD2FT5TDTT"
+      async=""
+    ></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TD2FT5TDTT');
+    </script>
   </body>
 </html>
