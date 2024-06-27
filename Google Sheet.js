@@ -9,7 +9,7 @@ form.addEventListener('submit', e => {
       Swal.fire({
         icon: 'success',
         title: 'Terima Kasih',
-        text: 'Data anda kami simpan',
+        text: 'Anda telah terdaftar',
       }).then(() => {
         window.location.reload();
       });
