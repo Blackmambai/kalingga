@@ -33,7 +33,7 @@
   color: #fff700;
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 }
 .point2-text1 {
   color: rgb(255, 255, 255);
@@ -58,7 +58,7 @@
 }
 .point2-root-class-name5 {
   width: 50%;
-  opacity: 0.001;
+  opacity: 0.01;
 }
 @media(max-width: 479px) {
   .point2-container {
