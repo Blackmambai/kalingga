@@ -27,77 +27,50 @@
   gap: var(--dl-space-space-halfunit);
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+}
+.point-icon {
+  fill: #ffffff;
+  width: 20px;
+  height: auto;
 }
 .point-text {
   color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-}
-.point-text1 {
-  color: rgb(255, 255, 255);
+  width: 100%;
 }
 .point-container3 {
   gap: var(--dl-space-space-halfunit);
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
-.point-text2 {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
+.point-icon2 {
+  fill: #ffffff;
+  width: 20px;
+  height: auto;
 }
-.point-text3 {
+.point-text1 {
   color: rgb(255, 255, 255);
+  width: 100%;
 }
 .point-container4 {
   gap: var(--dl-space-space-halfunit);
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+}
+.point-icon4 {
+  fill: #ffffff;
+  width: 20px;
+  height: auto;
 }
 .point-text4 {
   color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-}
-.point-text5 {
-  color: rgb(255, 255, 255);
-}
-.point-container5 {
-  gap: var(--dl-space-space-halfunit);
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.point-text6 {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-}
-.point-text7 {
-  color: rgb(255, 255, 255);
+  width: 100%;
 }
 .point-root-class-name6 {
   background-color: rgba(219, 163, 27, 0.24);
-}
-@media(max-width: 479px) {
-  .point-text3 {
-    text-align: left;
-  }
-  .point-text5 {
-    text-align: left;
-  }
-  .point-text7 {
-    text-align: left;
-  }
 }

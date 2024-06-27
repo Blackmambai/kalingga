@@ -1,11 +1,12 @@
 .whatsapp-container {
   top: 0px;
-  width: 45px;
-  height: 100vh;
+  width: auto;
+  height: auto;
   display: flex;
   z-index: 100;
   position: fixed;
-  align-items: flex-end;
+  align-items: center;
+  padding-right: var(--dl-space-space-unit);
   padding-bottom: var(--dl-space-space-unit);
   justify-content: flex-end;
 }

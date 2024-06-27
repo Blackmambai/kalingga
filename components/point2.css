@@ -41,3 +41,43 @@
   font-style: normal;
   font-weight: 400;
 }
+.point2-root-class-name {
+  width: 50%;
+}
+.point2-root-class-name1 {
+  width: 50%;
+}
+.point2-root-class-name2 {
+  width: 50%;
+}
+.point2-root-class-name3 {
+  width: 50%;
+}
+.point2-root-class-name4 {
+  width: 50%;
+}
+.point2-root-class-name5 {
+  width: 50%;
+  opacity: 0.001;
+}
+@media(max-width: 479px) {
+  .point2-root-class-name {
+    width: 100%;
+  }
+  .point2-root-class-name1 {
+    width: 100%;
+  }
+  .point2-root-class-name2 {
+    width: 100%;
+  }
+  .point2-root-class-name3 {
+    width: 100%;
+  }
+  .point2-root-class-name4 {
+    width: 100%;
+  }
+  .point2-root-class-name5 {
+    width: 100%;
+    display: none;
+  }
+}
