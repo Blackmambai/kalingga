@@ -1,0 +1,43 @@
+.point2-container {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  position: relative;
+  transition: 0.5s;
+  align-items: flex-start;
+  border-radius: 20px;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(144, 144, 144, 0.25);
+}
+.point2-container:hover {
+  transform: scale(106%);
+  box-shadow: 5px 5px 10px 0px rgba(33, 33, 33, 0.37);
+}
+.point2-icon {
+  fill: #fff700;
+  width: 20px;
+  height: auto;
+}
+.point2-container1 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.point2-text {
+  color: #fff700;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+.point2-text1 {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
