@@ -74,3 +74,11 @@
 .point-root-class-name6 {
   background-color: rgba(219, 163, 27, 0.24);
 }
+@media(max-width: 479px) {
+  .point-container {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+}

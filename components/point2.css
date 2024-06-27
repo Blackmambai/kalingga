@@ -61,6 +61,10 @@
   opacity: 0.001;
 }
 @media(max-width: 479px) {
+  .point2-container {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
   .point2-root-class-name {
     width: 100%;
   }

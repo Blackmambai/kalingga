@@ -492,8 +492,8 @@
   flex-direction: column;
 }
 .tentang-video {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 500px;
   transition: 0.5s;
   border-radius: 20px;
 }
@@ -523,8 +523,8 @@
   width: 100%;
   display: flex;
   align-items: stretch;
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
+  padding-left: var(--dl-space-space-sixunits);
+  padding-right: var(--dl-space-space-sixunits);
   flex-direction: row;
   justify-content: center;
 }
@@ -695,17 +695,17 @@
   align-items: stretch;
   margin-left: 0px;
   margin-right: 0px;
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
+  padding-left: var(--dl-space-space-sixunits);
+  padding-right: var(--dl-space-space-sixunits);
   flex-direction: row;
   justify-content: center;
 }
 .tentang-container12 {
   gap: var(--dl-space-space-halfunit);
   flex: 1;
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   position: relative;
   transition: 0.5s;
   align-items: flex-start;
@@ -760,9 +760,9 @@
 .tentang-container14 {
   gap: var(--dl-space-space-halfunit);
   flex: 1;
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   position: relative;
   transition: 0.5s;
   align-items: flex-start;
@@ -823,17 +823,17 @@
   align-items: stretch;
   margin-left: 0px;
   margin-right: 0px;
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
+  padding-left: var(--dl-space-space-sixunits);
+  padding-right: var(--dl-space-space-sixunits);
   flex-direction: row;
   justify-content: center;
 }
 .tentang-container17 {
   gap: var(--dl-space-space-halfunit);
   flex: 1;
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   position: relative;
   transition: 0.5s;
   align-items: flex-start;
@@ -889,9 +889,9 @@
 .tentang-container19 {
   gap: var(--dl-space-space-halfunit);
   flex: 1;
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   position: relative;
   transition: 0.5s;
   align-items: flex-start;
@@ -953,17 +953,17 @@
   align-items: stretch;
   margin-left: 0px;
   margin-right: 0px;
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
+  padding-left: var(--dl-space-space-sixunits);
+  padding-right: var(--dl-space-space-sixunits);
   flex-direction: row;
   justify-content: center;
 }
 .tentang-container22 {
   gap: var(--dl-space-space-halfunit);
   flex: 1;
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   position: relative;
   transition: 0.5s;
   align-items: flex-start;
@@ -1019,9 +1019,9 @@
 .tentang-container24 {
   gap: var(--dl-space-space-halfunit);
   flex: 1;
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-unit);
   position: relative;
   transition: 0.5s;
   align-items: flex-start;
@@ -1110,8 +1110,8 @@
   position: relative;
   align-items: center;
   padding-top: var(--dl-space-space-unit);
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
+  padding-left: var(--dl-space-space-sixunits);
+  padding-right: var(--dl-space-space-sixunits);
   flex-direction: row;
   padding-bottom: var(--dl-space-space-unit);
   justify-content: center;
@@ -1143,8 +1143,8 @@
   align-items: stretch;
   margin-left: 0px;
   margin-right: 0px;
-  padding-left: var(--dl-space-space-fiveunits);
-  padding-right: var(--dl-space-space-fiveunits);
+  padding-left: var(--dl-space-space-sixunits);
+  padding-right: var(--dl-space-space-sixunits);
   flex-direction: row;
   justify-content: center;
 }
