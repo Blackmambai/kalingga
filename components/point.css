@@ -1,0 +1,84 @@
+.point-container {
+  gap: 0;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  position: relative;
+  transition: 0.5s;
+  align-items: flex-start;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #dba31b;
+}
+.point-container:hover {
+  transform: scale(106%);
+  box-shadow: 5px 5px 10px 0px rgba(33, 33, 33, 0.37);
+}
+.point-container1 {
+  gap: var(--dl-space-space-twounits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.point-container2 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.point-icon {
+  fill: #ffffff;
+  width: 20px;
+  height: auto;
+}
+.point-text {
+  color: rgb(255, 255, 255);
+  width: 100%;
+}
+.point-container3 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.point-icon2 {
+  fill: #ffffff;
+  width: 20px;
+  height: auto;
+}
+.point-text1 {
+  color: rgb(255, 255, 255);
+  width: 100%;
+}
+.point-container4 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.point-icon4 {
+  fill: #ffffff;
+  width: 20px;
+  height: auto;
+}
+.point-text4 {
+  color: rgb(255, 255, 255);
+  width: 100%;
+}
+.point-root-class-name6 {
+  background-color: rgba(219, 163, 27, 0.24);
+}
+@media(max-width: 479px) {
+  .point-container {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+}
