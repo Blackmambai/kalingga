@@ -1580,7 +1580,6 @@
 .home-container42 {
   gap: var(--dl-space-space-twounits);
   width: 100%;
-  display: flex;
   overflow: hidden;
   align-items: center;
   flex-direction: row;
