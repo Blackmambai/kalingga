@@ -19,7 +19,6 @@
   cursor: pointer;
   padding: 0px;
   font-style: normal;
-  transition: 0.3s;
   font-weight: 400;
   border-color: var(--dl-color-gray-black);
   border-width: 2px;
@@ -30,16 +29,28 @@
   border-right-width: 0px;
   border-bottom-width: 0px;
 }
-.links-navlink:hover {
-  color: #2d2d2a;
+.links-text {
+  color: rgb(255, 255, 255);
+  width: auto;
+  cursor: pointer;
+  padding: 0px;
+  font-style: normal;
+  font-weight: 400;
+  border-color: var(--dl-color-gray-black);
+  border-width: 2px;
+  margin-right: 0px;
+  text-decoration: none;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
 }
-.links-link {
+.links-text1 {
   color: #ffffff;
   width: auto;
   cursor: pointer;
   padding: 0px;
   font-style: normal;
-  transition: 0.3s;
   font-weight: 400;
   border-color: var(--dl-color-gray-black);
   border-width: 2px;
@@ -49,9 +60,6 @@
   border-left-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 0px;
-}
-.links-link:hover {
-  color: #2d2d2a;
 }
 .links-get-started {
   cursor: pointer;
@@ -70,7 +78,7 @@
 .links-get-started:hover {
   background-color: #5228F5;
 }
-.links-text {
+.links-text2 {
   color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: 500;
@@ -87,12 +95,6 @@
   .links-container {
     justify-content: flex-end;
   }
-  .links-root-class-name {
-    display: flex;
-  }
-  .links-root-class-name2 {
-    display: flex;
-  }
 }
 @media(max-width: 767px) {
   .links-links {
@@ -104,12 +106,6 @@
     align-items: flex-start;
     flex-direction: column;
   }
-  .links-navlink {
-    color: #101010;
-  }
-  .links-link {
-    color: #101010;
-  }
   .links-get-started {
     display: flex;
     padding: var(--dl-space-space-unit);
@@ -118,13 +114,13 @@
   .links-root-class-name1 {
     display: none;
   }
-  .links-root-class-name3 {
-    display: none;
-  }
 }
 @media(max-width: 479px) {
-  .links-link {
-    color: rgb(16, 16, 16);
+  .links-text {
+    font-style: normal;
+    font-weight: 400;
+  }
+  .links-text1 {
     font-style: normal;
     font-weight: 400;
   }
