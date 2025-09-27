@@ -1,0 +1,62 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Kalingga | Barber Schooling</title><meta name="description" content="Pusat pelatihan pangkas rambut profesional"><meta property="og:image" content="/assets/img/album-kalingga/og-kalingga.webp"><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;subset=latin-ext&amp;display=swap"><link rel="stylesheet" href="/assets/css/bss-overrides.css"><link rel="stylesheet" href="/assets/css/animated.css"><link rel="stylesheet" href="/assets/css/index/all-page.css"><link rel="stylesheet" href="/assets/css/Lightbox-Gallery-baguetteBox.min.css"><link rel="stylesheet" href="/assets/css/Navbar-Right-Links-icons.css"><link rel="stylesheet" href="/assets/css/style.css"></head><body style="font-family: Poppins, sans-serif;"><div class="d-flex justify-content-center align-items-center main-container" style="height: 100vh;"><div class="col-sm-11 col-md-8 col-lg-6 container"><div class="card" style="border-radius: 16px;"><div class="card-header text-center" style="border-top-left-radius: 14px;border-top-right-radius: 14px;"><h1 class="mb-0 h4" style="font-family: Poppins, sans-serif;"><strong>Generator Link Promo</strong></h1></div><div class="card-body p-4 p-md-5"><form id="formPromo"><div class="mb-3"><label class="form-label" for="nama">Nama Pelanggan</label><input class="form-control form-control" type="text" id="nama" placeholder="Contoh: Budi Santoso" required="" style="border-radius: 16px;"></div><div class="mb-3"><label class="form-label" for="tanggal">Tanggal Akhir Promo</label><input class="form-control form-control" type="date" id="tanggal" required="" style="border-radius: 16px;"></div><div class="mb-3"><label class="form-label" for="tipeDiskon">Tipe Potongan Harga</label><select class="form-select form-select" id="tipeDiskon" required="" style="border-radius: 16px;"><option value="persen" selected="">Persentase (%)</option><option value="nominal">Nominal (Rp)</option></select></div><div class="mb-4"><label class="form-label" for="diskon">Nilai Potongan Harga</label><input class="form-control form-control" type="number" id="diskon" placeholder="Contoh: 25 atau 50000" required="" style="border-radius: 16px;"></div><div class="d-grid"><button class="btn btn-primary fw-semibold py-2" type="submit" style="border-radius: 16px;"><i class="bi bi-link-45deg"></i> Buat Link                            </button></div></form><div class="mt-4" id="hasilLinkContainer" style="opacity:0;display:none;"><hr><h2 class="text-center mb-3 h6">Link Berhasil Dibuat!</h2><label class="form-label" for="hasilLink">Link Promo Anda</label><div class="input-group"><input class="form-control form-control" type="text" id="hasilLink" readonly=""><button class="btn btn-outline-secondary" type="button" id="salinBtn" title="Salin ke clipboard"><i id="iconSalin" class="bi bi-clipboard"></i><span id="teksSalin">Salin</span></button></div></div></div></div></div></div><script>
+        // Mendapatkan elemen-elemen dari DOM
+        const formPromo = document.getElementById('formPromo');
+        const hasilLinkContainer = document.getElementById('hasilLinkContainer');
+        const hasilLinkInput = document.getElementById('hasilLink');
+        const salinBtn = document.getElementById('salinBtn');
+        const iconSalin = document.getElementById('iconSalin');
+        const teksSalin = document.getElementById('teksSalin');
+
+        // Menambahkan event listener saat form disubmit
+        formPromo.addEventListener('submit', function(event) {
+            // Mencegah form dari refresh halaman
+            event.preventDefault();
+
+            // Mengambil nilai dari setiap input
+            const nama = document.getElementById('nama').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const tipeDiskon = document.getElementById('tipeDiskon').value;
+            const diskon = document.getElementById('diskon').value;
+            
+            // URL dasar sekarang mengarah ke file promo.html
+            const baseURL = 'https://kalingga-test.bss.design/pelanggan-setia.html';
+
+            // Membuat URL dengan parameter
+            // Menggunakan encodeURIComponent untuk mengubah spasi dan karakter spesial menjadi format URL
+            const finalURL = `${baseURL}?nama=${encodeURIComponent(nama)}&tanggal=${tanggal}&tipe_diskon=${tipeDiskon}&diskon=${diskon}`;
+
+            // Menampilkan hasil link ke input
+            hasilLinkInput.value = finalURL;
+
+            // Menampilkan kontainer hasil dengan animasi fade-in
+            hasilLinkContainer.style.display = 'block';
+            setTimeout(() => {
+                hasilLinkContainer.style.opacity = '1';
+            }, 10); 
+        });
+
+        // Event listener untuk tombol salin (tanpa perubahan)
+        salinBtn.addEventListener('click', function() {
+            hasilLinkInput.select();
+            hasilLinkInput.setSelectionRange(0, 99999);
+            
+            try {
+                document.execCommand('copy');
+                teksSalin.textContent = 'Disalin!';
+                iconSalin.classList.replace('bi-clipboard', 'bi-check-lg');
+                salinBtn.classList.replace('btn-outline-secondary', 'btn-success');
+
+                setTimeout(() => {
+                    teksSalin.textContent = 'Salin';
+                    iconSalin.classList.replace('bi-check-lg', 'bi-clipboard');
+                    salinBtn.classList.replace('btn-success', 'btn-outline-secondary');
+                }, 2000);
+            } catch (err) {
+                console.error('Gagal menyalin link: ', err);
+                teksSalin.textContent = 'Gagal!';
+                 setTimeout(() => {
+                   teksSalin.textContent = 'Salin';
+                }, 2000);
+            }
+        });
+    </script><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/Form/formdaftar.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script></body></html>

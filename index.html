@@ -1,615 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>Kalingga | Barber Schooling</title><meta name="description" content="Pusat pelatihan pangkas rambut profesional"><meta property="og:image" content="/assets/img/album-kalingga/og-kalingga.webp"><link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;subset=latin-ext&amp;display=swap"><link rel="stylesheet" href="/assets/css/bss-overrides.css"><link rel="stylesheet" href="/assets/css/animated.css"><link rel="stylesheet" href="/assets/css/index/all-page.css"><link rel="stylesheet" href="/assets/css/Lightbox-Gallery-baguetteBox.min.css"><link rel="stylesheet" href="/assets/css/Navbar-Right-Links-icons.css"><link rel="stylesheet" href="/assets/css/style.css"></head><body style="font-family: Poppins, sans-serif;"><style>
+        :root {
+            --gold: #c59d5f;
+            --dark-bg: #111111;
+            --card-bg: #1a1a1a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+        }
+        
+        }
+        .navbar {
+            transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+        }
+        .navbar.scrolled {
+            background-color: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .hero-section {
+            position: relative; 
+            overflow: hidden;
+            background-color: var(--dark-bg);
+        }
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.7;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .typing-text {
+            color: var(--gold);
+            min-height: 50px;
+        }
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--dark-bg);
+            border-color: var(--gold);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: #d4ac75;
+            border-color: #d4ac75;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(197, 157, 95, 0.2);
+        }
+        .section-title {
+            color: var(--gold);
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .bg-dark-2 {
+             background-color: #000;
+        }
+    </style><div class="d-flex justify-content-center align-items-center" style="z-index: 999;position: absolute;width: 100%;padding-right: 12px;padding-left: 12px;"><nav class="navbar navbar-expand-md fixed-top d-flex" data-bs-theme="dark" style="background: rgba(17,17,17,0.73);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);width: 100%;"><div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="font-size: 16px;"><img class="img-fluid" width="1775" height="2000" src="/assets/img/Logo/Kalingga.webp" style="height: auto;width: 30px;margin-right: 7px;">Kalingga Barber Shop</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-2"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="/index.html" target="_parent">Halaman</a></li><li class="nav-item"><a class="nav-link" href="/index.html#tujuan" target="_parent">Tujuan</a></li><li class="nav-item"><a class="nav-link" href="/daftar-kelas.html" target="_parent">Daftar kelas</a></li><li class="nav-item"><a class="nav-link" href="/karir.html" target="_parent">Karir</a></li><li class="nav-item"><a class="nav-link" href="/kemitraan.html" target="_parent">Join Kemitraan</a></li><li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Lainnya</a><div class="dropdown-menu" style="border-radius: 16px;background: rgb(17,17,17);margin-bottom: 12px;padding-left: 10px;padding-right: 10px;"><a class="dropdown-item nav-link" href="#">Artikel</a><a class="dropdown-item nav-link" href="/galeri.html" target="_parent">Galeri</a></div></li></ul><button class="btn btn-sm btn-gold" type="button" style="border-radius: 16px;padding: 5px 13px;padding-top: 8px;padding-bottom: 8px;" data-bs-target="#formdaftar" data-bs-toggle="modal">Pelatihan Gratis!</button></div></div></nav></div><main><section class="text-center d-flex vh-100 flex-column justify-content-center align-items-center hero-section" id="utama" style="padding-left: 10px;padding-right: 10px;"><canvas id="hero-canvas"></canvas><div class="hero-content"><img class="img-fluid" width="1775" height="2000" src="/assets/img/Logo/Kalingga.webp" style="height: auto;width: 130px;margin-right: 0px;"><p class="fs-4 fw-semibold typing-text" style="font-family: Poppins, sans-serif;margin-top: 16px;"></p><p class="lead text-white-50 mt-3" style="font-size: 16px;">Membentuk Profesional, Membangun Wirausaha, Menguasai Industri.</p><a class="btn fw-bold mt-auto py-2 btn-gold" role="button" href="#pelatihan" style="border-radius: 16px;width: auto;"><span style="font-weight: normal !important;">Gabung Gratis</span></a></div></section><section class="py-5" id="tujuan" style="background: linear-gradient(#111111, rgba(17,17,17,0.67) 49%, #111111), url(&quot;/assets/img/album-kalingga/1000110787.webp&quot;) center / cover no-repeat, var(--dark-bg);padding-left: 10px;padding-right: 10px;"><div class="container text-center"><h2 class="display-5 fw-bold text-white" style="font-family: Poppins, sans-serif;">Tujuan Kalingga</h2><p class="fs-5 mt-2 section-title">Kalingga Barber Shcooling</p><p class="text-white-50 mb-5 mx-auto" style="max-width:800px;"><span style="font-weight: normal !important;">Visi Kami untuk Masa Depan Industri Barbershop</span></p><div class="row justify-content-center g-4"><div class="col-md-6 col-lg-4" style="margin-top: 60px;"><div class="card h-100 text-center" style="border-radius: 16px;border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;"><div class="d-flex justify-content-center" style="z-index: 15;margin-top: -70px;margin-bottom: 16px;"><div style="border-radius: 50%;background: var(--primary-color);padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="font-size: 41px;padding: 0px;width: 30px;height: 30px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M208 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9l-28.6 47.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L328 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H248zM7 7C16.4-2.3 31.6-2.3 41 7l80 80c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L7 41C-2.3 31.6-2.3 16.4 7 7zM471 7c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-80 80c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L471 7zM7 505c-9.4-9.4-9.4-24.6 0-33.9l80-80c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L41 505c-9.4 9.4-24.6 9.4-33.9 0zm464 0l-80-80c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l80 80c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0z"></path></svg></div></div><div class="card-body" style="padding: 0px;"><h3 class="card-title h4" style="font-family: Poppins, sans-serif;"><strong>Mencetak Profesional Unggul</strong></h3><p class="card-text" style="font-family: Poppins, sans-serif;"><span style="font-weight: normal !important;">Membangun dan membentuk SDM yg handal,berkualitas dan profesional di bidang seni rambut.</span></p></div></div></div><div class="col-md-6 col-lg-4" style="margin-top: 60px;"><div class="card h-100 text-center" style="border-radius: 16px;border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;"><div class="d-flex justify-content-center" style="z-index: 15;margin-top: -70px;margin-bottom: 16px;"><div style="border-radius: 50%;background: var(--primary-color);padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="font-size: 41px;padding: 0px;width: 30px;height: 30px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"></path></svg></div></div><div class="card-body" style="padding: 0px;"><h3 class="card-title h4" style="font-family: Poppins, sans-serif;"><strong>Bekal Pengetahuan untuk Usaha Mandiri</strong></h3><p class="card-text" style="font-family: Poppins, sans-serif;"><span style="font-weight: normal !important;">Memberikan pengetahuan dan pengalaman kepada peserta di dunia seni rambut, untuk bekal suatu saat berwirausaha sendiri.</span></p></div></div></div><div class="col-md-6 col-lg-4" style="margin-top: 60px;"><div class="card h-100 text-center" style="border-radius: 16px;border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;"><div class="d-flex justify-content-center" style="z-index: 15;margin-top: -70px;margin-bottom: 16px;"><div style="border-radius: 50%;background: var(--primary-color);padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="font-size: 12px;padding: 0px;width: 30px;height: 30px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"></path></svg></div></div><div class="card-body" style="padding: 0px;"><h3 class="card-title h4" style="font-family: Poppins, sans-serif;"><strong>Menciptakan Peluang Kerja &amp; Penghasilan</strong></h3><p class="card-text" style="font-family: Poppins, sans-serif;"><span style="font-weight: normal !important;">Mengurangi angka pengangguran, dan memberikan kesempatan peserta yg hanya berijazah setara SMA/SMK untuk mendapatkan income atau penghasilan yg lebih layak.</span></p></div></div></div></div></div></section><div style="height: 3px;background: linear-gradient(90deg, black, rgb(255,255,255) 51%, #111111);"></div><section class="py-5" id="pelatihan" style="padding-left: 10px;padding-right: 10px;"><div class="container text-center"><h2 class="display-5 fw-bold text-white" style="font-family: Poppins, sans-serif;">Program Pelatihan Profesional</h2><p class="fs-5 mt-2 section-title" style="font-family: Poppins, sans-serif;">Investasi Leher Keatas untuk Karir Anda</p><p class="text-white-50 mb-5 mx-auto" style="max-width:800px;"><span style="font-weight: normal !important;">Di Kalingga, kami percaya bahwa menjadi seorang barber bukan hanya tentang memotong rambut, tetapi tentang menciptakan sebuah karya seni dan memberikan pengalaman terbaik bagi pelanggan. Kurikulum kami dirancang oleh para ahli industri untuk memastikan Anda tidak hanya siap kerja, tetapi juga siap menjadi yang terbaik.</span></p><div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 justify-content-center g-4"><div style="margin-top: 60px;"><div class="card h-100 text-start" style="border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;};border-radius: 16px;"><div class="d-flex justify-content-center" style="z-index: 15;margin-top: -70px;margin-bottom: 16px;"><div style="border-radius: 50%;background: var(--primary-color);padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="font-size: 41px;padding: 0px;width: 30px;height: 30px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5l57.4 95.6L63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8L301.5 179.8l57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z"></path></svg></div></div><div class="card-body d-flex flex-column"><h3 class="fw-bold text-white mb-3 card-title" style="font-family: Poppins, sans-serif;">Kelas Gratis (Seleksi)</h3><h3 class="display-4 fw-bold my-3 card-title" style="color:#ffc107;">Free</h3><ul class="list-unstyled text-light flex-grow-1 mb-4"><li class="mb-2"><span style="font-weight: normal !important;">✓ Teknik Gunting, Clipper, dan Razor</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Haircut Klasik &amp; Modern</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Pengetahuan Produk Standar</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Standar Sanitasi</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Jaminan Penyaluran Kerja (Bagi lulusan terbaik)*</span></li></ul><a class="btn fw-bold w-100 mt-auto py-2 btn-gold" role="button" href="#" style="border-radius: 16px;" data-bs-target="#formdaftar" data-bs-toggle="modal"><span style="font-weight: normal !important;">Gabung Secara Gratis</span></a></div></div></div><div class="col-xxl-4" style="margin-top: 60px;"><div class="card h-100 text-start" style="border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;};border-radius: 16px;"><div class="d-flex justify-content-center" style="z-index: 15;margin-top: -70px;margin-bottom: 16px;"><div style="border-radius: 50%;background: var(--primary-color);padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="font-size: 41px;padding: 0px;width: 30px;height: 30px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5l57.4 95.6L63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8L301.5 179.8l57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z"></path></svg></div></div><div class="card-body d-flex flex-column"><h3 class="fw-bold text-white mb-3 card-title" style="font-family: Poppins, sans-serif;">Kelas Privat</h3><h3 class="display-4 fw-bold my-3 card-title" style="color:#ffc107;">2.500.000</h3><ul class="list-unstyled text-light flex-grow-1 mb-4"><li class="mb-2"><span style="font-weight: normal !important;">✓ Teknik Gunting, Clipper, dan Razor</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Haircut Klasik &amp; Modern (Fade, Undercut, dll)</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Pengetahuan Produk (Pomade, Wax, dll)</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Standar Sanitasi &amp; Higienitas Salon</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Etika &amp; Komunikasi Pelanggan Profesional</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Jaminan Penyaluran Kerja (Bagi lulusan terbaik)*</span></li></ul><a class="btn fw-bold w-100 mt-auto py-2 btn-gold" role="button" href="https://api.whatsapp.com/send?phone=6282141540007&amp;text=Halo%2C%20saya%20ingin%20bergabung%20kelas%20privat%20barbershop%20Kalingga%20project.%20boleh%20di%20infokan%20lebih%20lanjut%3F" style="border-radius: 16px;"><span style="font-weight: normal !important;">Gabung Kelas Privat</span></a></div></div></div><div style="margin-top: 60px;"><div class="card h-100 text-start" style="border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;};border-radius: 16px;"><div class="d-flex justify-content-center" style="z-index: 15;margin-top: -70px;margin-bottom: 16px;"><div style="border-radius: 50%;background: var(--primary-color);padding: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="d-flex justify-content-center align-items-center" style="font-size: 41px;padding: 0px;width: 30px;height: 30px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5l57.4 95.6L63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8L301.5 179.8l57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z"></path></svg></div></div><div class="card-body d-flex flex-column"><h3 class="fw-bold text-white mb-3 card-title" style="font-family: Poppins, sans-serif;">Kelas Privat Premium</h3><h3 class="display-4 fw-bold my-3 card-title" style="color:#ffc107;">5.000.000</h3><ul class="list-unstyled text-light flex-grow-1 mb-4"><li class="mb-2"><span style="font-weight: normal !important;">✓ Semua materi kelas reguler</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Advanced Fading &amp; Hair Tattoo</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Teknik Coloring &amp; Bleaching Dasar</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Personal Branding untuk Barber</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Dasar Manajemen &amp; Pemasaran Barbershop</span></li><li class="mb-2"><span style="font-weight: normal !important;">✓ Sertifikat Profesional Kalingga</span></li></ul><a class="btn fw-bold w-100 mt-auto py-2 btn-gold" role="button" href="https://api.whatsapp.com/send?phone=6282141540007&amp;text=Halo%2C%20saya%20ingin%20bergabung%20kelas%20*privat%20premium*%20barbershop%20Kalingga%20project.%20boleh%20di%20infokan%20lebih%20lanjut%3F" style="border-radius: 16px;"><span style="font-weight: normal !important;">Gabung Kelas Privat Premium</span></a></div></div></div></div></div></section><div style="height: 3px;background: linear-gradient(90deg, black, rgb(255,255,255) 51%, #111111);"></div><section class="py-5 bg-dark-2" id="layanan" style="background: linear-gradient(#111111, rgba(17,17,17,0.67) 49%, #111111), url(&quot;/assets/img/album-kalingga/1000106651.jpg&quot;) center / cover no-repeat, var(--dark-bg);padding-left: 10px;padding-right: 10px;"><div class="container text-center"><h2 class="display-5 fw-bold text-white" style="font-family: Poppins, sans-serif;">Layanan Profesional untuk Bisnis Anda</h2><p class="fs-5 mt-2 mb-5 section-title">Fokus pada pertumbuhan, biarkan kami yang mengurus detail operasional.</p><div class="row justify-content-center g-4"><div class="col-md-6"><div class="card h-100 p-4" style="border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;};border-radius: 16px;"><div class="card-body text-center"><h3 class="fw-bold text-white mt-4 mb-3 card-title" style="font-family: Poppins, sans-serif;">Pemenuhan SDM Barbershop</h3><p class="text-white-50"><span style="font-weight: normal !important;">Menemukan barber yang terampil dan profesional adalah tantangan. Kami menyediakannya untuk Anda. Lulusan kami telah teruji, terstandarisasi, dan siap untuk meningkatkan kualitas layanan di barbershop Anda sejak hari pertama.</span></p><a class="btn mt-3 btn-gold" role="button" href="/karir.html" style="border-radius: 16px;" target="_parent">Cari Talenta Terbaik</a></div></div></div><div class="col-md-6"><div class="card h-100 p-4" style="border: 2px solid var(--primary-color);box-shadow: 7px 7px 20px 0px rgba(197,157,95,0.34);padding: 16px;padding-top: 42px;};border-radius: 16px;"><div class="card-body text-center"><h3 class="fw-bold text-white mt-4 mb-3 card-title" style="font-family: Poppins, sans-serif;">Pengelolaan Barbershop</h3><p class="text-white-50"><span style="font-weight: normal !important;">Ingin punya barbershop tapi tidak punya waktu mengelolanya? Sistem manajemen kami mencakup segalanya: rekrutmen, pelatihan staf, pemasaran, manajemen inventaris, hingga laporan keuangan. Anda tinggal terima hasil.</span></p><a class="btn mt-3 btn-gold" role="button" href="/kemitraan.html" style="border-radius: 16px;" target="_parent">Konsultasi Manajemen</a></div></div></div></div></div></section><div style="height: 3px;background: linear-gradient(90deg, black, rgb(255,255,255) 51%, #111111);"></div><section class="py-5" id="loker" style="padding-left: 10px;padding-right: 10px;"><div class="text-center"><h2 class="display-5 fw-bold text-white" style="font-family: Poppins, sans-serif;">Info Karir Barbershop</h2><p class="fs-5 mt-2 mb-5 section-title"><span style="font-weight: normal !important;">Gerbang Anda menuju karir cemerlang di jaringan barbershop terbaik.</span></p></div><div class="container"><div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3"><div style="padding-left: 8px;padding-right: 8px;"><div style="text-align: left;width: 100%;padding: 13px;border-radius: 16px;border: 3px solid rgb(197,157,95) ;border-left: 9px solid rgb(197,157,95) ;"><h5 class="fw-bold mb-1">Barber Man</h5><p class="fw-bold" style="font-size: 13px;margin-bottom: 16px;"><span style="font-weight: normal !important;">September 2025</span></p><div style="height: 3px;background: linear-gradient(90deg, black, rgb(255,255,255) 51%, #111111);margin-bottom: 16px;"></div><p class="text-white-50" style="margin-bottom: 16px;"><span style="font-weight: normal !important;">Partner Barbershop - Kediri (Disediakan Mess)</span><br><span style="font-weight: normal !important;">- SMA/SMK</span><br><span style="font-weight: normal !important;">- Pria Sejati</span></p><p class="text-white-50" style="margin-bottom: 16px;"><span style="font-weight: normal !important;">Penempatan : Kota Kediri</span></p><button class="btn btn-sm btn-gold" type="button" style="border-radius: 16px;padding: 5px 13px;padding-top: 8px;padding-bottom: 8px;width: 100%;">Daftar</button></div></div></div></div></section><section class="d-flex flex-column justify-content-center align-items-center py-5" id="galeri" style="padding-left: 10px;padding-right: 10px;"><div class="text-center"><h2 class="display-5 fw-bold text-white" style="font-family: Poppins, sans-serif;">Dokumentasi Pelatihan</h2><p class="fs-5 mt-2 section-title" style="margin-bottom: 21px;"><span style="font-weight: normal !important;">Foto dokumentasi pelatihan member Kalingga</span></p></div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 g-4"><div><div class="gallery-item" style="border-radius: 16px;"><img class="rounded img-fluid object-fit-cover" alt="Album-Kalingga" src="/assets/img/album-kalingga/1000086047.webp" style="height: 400px;width: 100%;" loading="lazy"></div></div><div><div class="gallery-item" style="border-radius: 16px;"><img class="rounded img-fluid object-fit-cover" src="/assets/img/album-kalingga/1000086064.webp" alt="Album-Kalingga" style="height: 400px;width: 100%;" loading="lazy"></div></div><div><div class="gallery-item" style="border-radius: 16px;"><img class="rounded img-fluid object-fit-cover" src="/assets/img/album-kalingga/1000086069.webp" alt="Album-Kalingga" style="height: 400px;width: 100%;" loading="lazy"></div></div><div><div class="gallery-item" style="border-radius: 16px;"><img class="rounded img-fluid object-fit-cover" src="/assets/img/album-kalingga/1000086073.webp" alt="Album-Kalingga" style="height: 400px;width: 100%;" loading="lazy"></div></div><div><div class="gallery-item" style="border-radius: 16px;"><img class="rounded img-fluid object-fit-cover" src="/assets/img/album-kalingga/1000086081.webp" alt="Album-Kalingga" style="height: 400px;width: 100%;" loading="lazy"></div></div><div><div class="gallery-item" style="border-radius: 16px;"><img class="rounded img-fluid object-fit-cover" src="/assets/img/album-kalingga/1000110787.webp" alt="Album-Kalingga" style="height: 400px;width: 100%;" loading="lazy"></div></div></div><a class="btn btn-sm btn-gold" role="button" style="border-radius: 16px;padding: 5px 13px;padding-top: 8px;padding-bottom: 8px;margin-top: 40px;" href="/galeri.html" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-right: 5px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"></path></svg>Lihat lainnya</a></section><section class="d-flex flex-column justify-content-center align-items-center py-5" id="contact" style="background: linear-gradient(#111111, rgba(17,17,17,0.67) 49%, #111111), url(&quot;/assets/img/album-kalingga/1000268827.webp&quot;) center / cover no-repeat, var(--dark-bg);padding-left: 10px;padding-right: 10px;"><div class="text-center"><h2 class="display-5 fw-bold text-white" style="font-family: Poppins, sans-serif;">WhatsApp Resmi Kalingga</h2><p class="fs-5 mt-2 section-title" style="margin-bottom: 21px;"><span style="font-weight: normal !important;">Help desk &amp; Informasi lengkap dari kalingga hubungi nomor whatsapp official kalingga</span></p></div><a class="btn btn-sm btn-gold" role="button" style="border-radius: 16px;padding: 5px 13px;padding-top: 8px;padding-bottom: 8px;" href="https://api.whatsapp.com/send?phone=6282141540007&amp;text=Halo%2C%20saya%20ingin%20info%20lebih%20lanjut%20tentang%20kalingga%20project"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-right: 5px;"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>WhatsApp Resmi Kalingga</a></section></main><footer style="background: rgb(17,17,17);"><div style="height: 3px;background: linear-gradient(90deg, black, rgb(255,255,255) 51%, #111111);"></div><div class="modal fade" role="dialog" tabindex="-1" id="formdaftar" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header justify-content-between"><h5 class="modal-title"><strong>Formulir pendaftaran</strong></h5><button class="btn d-flex justify-content-center align-items-center" type="button" aria-label="Close" data-bs-dismiss="modal" style="background: #000000;font-weight: bold;color: rgb(255,255,255);border-radius: 50%;padding: 3px;width: 28px;height: 28px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"></path></svg></button></div><div class="modal-body text-center"><img class="img-fluid object-fit-cover" width="2976" height="3968" src="/assets/img/album-kalingga/1000110776.webp" style="border-top-left-radius: 16px;border-top-right-radius: 16px;height: 171.3px;" loading="auto" alt="Kalingga-Barbershop"><form class="text-start" id="daftar" style="width: 100%;margin-bottom: 16px;padding: 16px;color: rgb(255,255,255);background: var(--dark-bg);border-radius: 16px;border-top-left-radius: 0px;border-top-right-radius: 1px;" method="post" target="_self"><p style="text-align: center;"><strong>Isi Formulir berikut untuk syarat pendaftaran. isi dengan benar dan tepat.</strong></p><div style="margin-bottom: 16px;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">Nama</span></label><input class="form-control" type="text" placeholder="Nama" name="nama" required="" style="border-radius: 16px;"></div><div style="margin-bottom: 16px;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">Alamat</span></label><input class="form-control" type="text" placeholder="Alamat" name="alamat" required="" style="border-radius: 16px;"></div><div style="margin-bottom: 16px;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">No. WhatsApp</span></label><input class="form-control" type="text" placeholder="No WhatsApp (+62)" name="nomor-whatsapp" required="" style="border-radius: 16px;"></div><div class="d-flex flex-column flex-md-row" style="display: grid;grid-template: 1fr / 1fr 1fr;gap: 16px;"><div style="margin-bottom: 16px;width: 100%;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">Usia</span></label><input class="form-control" type="number" name="usia" placeholder="Usia" required="" style="border-radius: 16px;"></div><div style="margin-bottom: 16px;width: 100%;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">Pendidikan Terakhir</span></label><select class="form-select" name="pendidikan-terakhir" style="border-radius: 16px;"><option value="SMA">SMA</option><option value="SMK">SMK</option><option value="undefined">D3</option><option value="undefined">D4</option><option value="S1">S1</option></select></div></div><div style="margin-bottom: 16px;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">Pengalaman kerja terakhir</span></label><input class="form-control" type="text" name="riwayat-kerja" placeholder="Pekerjaan sebelumnya" required="" style="border-radius: 16px;"></div><div style="margin-bottom: 16px;"><label class="form-label" style="font-weight: bold;padding-left: 4px;"><span style="font-weight: normal !important;">Punya pengalaman potong rambut?</span></label><select class="form-select" name="pendidikan-terakhir" style="border-radius: 16px;"><option value="Iya, ada pengalaman">Iya, ada pengalaman</option><option value="Tidak ada pengalaman">Tidak ada pengalaman</option></select></div><div style="margin-bottom: 16px;"><label class="form-label" for="formCheck-1"><em><span style="font-weight: normal !important;">Kalender terisi otomatis</span></em></label><input class="form-control" id="tanggal" type="date" name="tanggal" readonly="" style="border-radius: 16px;"><script>
+        // Get today's date
+        const today = new Date().toISOString().split('T')[0];
+        
+        // Set the value of the input to today's date
+        document.getElementById('tanggal').value = today;
+    </script></div><div class="form-check" style="margin-bottom: 16px;"><input class="form-check-input" type="checkbox" id="formCheck-1" required=""><label class="form-check-label" for="formCheck-1"><span style="font-weight: normal !important;">Centang untuk menyetujui dan bersedia mengikuti pelatihan hingga selesai.</span></label></div><div class="d-flex justify-content-center" style="margin-bottom: 16px;"><label class="form-label" id="status-message"></label></div><button class="btn fw-bold mt-auto py-2 btn-gold" style="border-radius: 16px;width: 100%;" type="submit">Daftar Sekarang!</button><script src="./assets/js/Form/formdaftar.js"></script></form></div><script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tampilkan modal secara otomatis saat halaman dimuat
+            setTimeout(() => {
+                const promoModal = new bootstrap.Modal(document.getElementById('promoModal'));
+                promoModal.show();
+            }, 2000); // Tampilkan modal setelah 2 detik
+        });
+    </script></div></div></div><div class="container py-4 py-lg-5" style="font-family: Poppins, sans-serif;"><div class="row justify-content-center"><div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column"><h3 class="fs-6 text-body" style="font-family: Poppins, sans-serif;"><strong>Layanan</strong></h3><ul class="list-unstyled"><li style="color: rgb(255,255,255);"><a href="/daftar-kelas.html" target="_parent"><span style="font-weight: normal !important;">Pelatihan gratis &amp; privat</span></a></li><li style="color: rgb(255,255,255);"><a href="/kemitraan.html" target="_parent"><span style="font-weight: normal !important;">Join Kemitraan</span></a></li><li style="color: rgb(255,255,255);"><a href="#"><span style="font-weight: normal !important;">Pangkas Rambut</span></a></li></ul></div><div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column"><h3 class="fs-6 text-body" style="font-family: Poppins, sans-serif;"><strong>Tentang</strong></h3><ul class="list-unstyled"><li style="color: rgb(255,255,255);"><a href="/index.html#tujuan" target="_parent"><span style="font-weight: normal !important;">Tujuan kalingga project</span></a></li><li style="color: rgb(255,255,255);"><a href="/galeri.html" target="_parent"><span style="font-weight: normal !important;">Galeri</span></a></li></ul></div><div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column"><h3 class="fs-6 text-body" style="font-family: Poppins, sans-serif;"><strong>Karir</strong></h3><ul class="list-unstyled"><li style="color: rgb(255,255,255);"><a href="/karir.html" target="_parent"><span style="font-weight: normal !important;">Lowongan pekerjaan</span></a></li></ul></div><div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last"><div class="fw-bold d-flex align-items-center mb-2"><span><img class="img-fluid" width="1775" height="2000" src="/assets/img/Logo/Kalingga.webp" style="height: auto;width: 30px;margin-right: 7px;">Kalingga Barbershop&nbsp;</span></div><p style="font-family: Poppins, sans-serif;"><span style="font-weight: normal !important;">Terbuka pelatihan pangkas rambut profesional privat dan gratis. join kemitraan sekarang juga.</span></p></div></div><hr><div class="d-flex justify-content-between align-items-center pt-3"><p class="mb-0"><span style="font-weight: normal !important;">© 2025 Kalingga Barbershop School. All Rights Reserved.</span></p></div></div></footer><script>
+        // --- Navbar Scroll Effect ---
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-<head>
-  <title>Kalingga Barber Schooling</title>
-  <meta name="description"
-    content="Kalingga Barber Schooling adalah tempat belajar keren buat kamu yang mau jadi barber handal. Di sini, kamu bisa belajar berbagai teknik potong rambut, styling, dan grooming langsung dari para ahli" />
-  <meta property="og:title" content="Kalingga Barber Schooling" />
-  <meta property="og:description"
-    content="Kalingga Barber Schooling adalah tempat belajar keren buat kamu yang mau jadi barber handal. Di sini, kamu bisa belajar berbagai teknik potong rambut, styling, dan grooming langsung dari para ahli" />
-  <meta property="og:image"
-    content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/1af78fb9-dec3-40a5-82e8-580ca2a79d89/d8719e16-e001-4f32-a629-c4ca090c81cc?org_if_sml=1&amp;force_format=original" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="utf-8" />
-  <meta property="twitter:card" content="summary_large_image" />
+        // --- Typing Effect ---
+        const typingText = document.querySelector('.typing-text');
+        const phrases = ["Cetak Profesional Siap Kerja", "Mulai Bisnis Anda Bersama Kami", "Manajemen Barbershop Andal"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
-  <style data-tag="reset-style-sheet">
-    html {
-      line-height: 1.15;
-    }
+        function type() {
+            if (!typingText) return;
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
 
-    body {
-      margin: 0;
-    }
+            let typeSpeed = isDeleting ? 20 : 20;
 
-    * {
-      box-sizing: border-box;
-      border-width: 0;
-      border-style: solid;
-    }
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 1000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            setTimeout(type, typeSpeed);
+        }
+        
+        // --- Canvas Particle Animation ---
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let particlesArray;
 
-    p,
-    li,
-    ul,
-    pre,
-    div,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    figure,
-    blockquote,
-    figcaption {
-      margin: 0;
-      padding: 0;
-    }
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
 
-    button {
-      background-color: transparent;
-    }
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x; this.y = y; this.directionX = directionX; this.directionY = directionY; this.size = size; this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = 'rgba(197, 157, 95, 0.5)';
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                this.x += this.directionX; this.y += this.directionY;
+                this.draw();
+            }
+        }
 
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      font-family: inherit;
-      font-size: 100%;
-      line-height: 1.15;
-      margin: 0;
-    }
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * .4) - .2;
+                let directionY = (Math.random() * .4) - .2;
+                particlesArray.push(new Particle(x, y, directionX, directionY, size));
+            }
+        }
 
-    button,
-    select {
-      text-transform: none;
-    }
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = `rgba(197, 157, 95, ${opacityValue})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
 
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"] {
-      -webkit-appearance: button;
-    }
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            connect();
+        }
 
-    button::-moz-focus-inner,
-    [type="button"]::-moz-focus-inner,
-    [type="reset"]::-moz-focus-inner,
-    [type="submit"]::-moz-focus-inner {
-      border-style: none;
-      padding: 0;
-    }
-
-    button:-moz-focus,
-    [type="button"]:-moz-focus,
-    [type="reset"]:-moz-focus,
-    [type="submit"]:-moz-focus {
-      outline: 1px dotted ButtonText;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: inherit;
-    }
-
-    input {
-      padding: 2px 4px;
-    }
-
-    img {
-      display: block;
-    }
-
-    html {
-      scroll-behavior: smooth
-    }
-  </style>
-  <style data-tag="default-style-sheet">
-    html {
-      font-family: Inter;
-      font-size: 16px;
-    }
-
-    body {
-      font-weight: 400;
-      font-style: normal;
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: normal;
-      line-height: 1.15;
-      color: var(--dl-color-theme-neutral-dark);
-      background-color: var(--dl-color-theme-neutral-light);
-
-      fill: var(--dl-color-theme-neutral-dark);
-    }
-  </style>
-  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
-  <link rel="shortcut icon" href="public/badge1.png" type="icon/png" sizes="32x32" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-    data-tag="font" />
-  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
-  <!-- Google tag (gtag.js) -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TD2FT5TDTT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-TD2FT5TDTT');
-  </script>
-</head>
-
-<body>
-  <link rel="stylesheet" href="./style.css" />
-  <div>
-    <link href="./index.css" rel="stylesheet" />
-    <div class="home-container">
-      <header class="navbar1-container navbar1-root-class-name">
-        <header data-thq="thq-navbar" class="navbar1-navbar-interactive"><a href="index.html"
-            class="navbar1-navlink"><img alt="logo"
-              src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/PhotoRoom-20240626_100151%20white.png?updatedAt=1719403253514"
-              class="navbar1-image1" /></a>
-          <div data-thq="thq-navbar-nav" class="navbar1-desktop-menu">
-            <nav class="navbar1-links">
-              <div class="navbar1-container1"><a href="index.html" id="menuprofil"
-                  class="navbar1-link1 thq-link thq-body-small">Profil</a><a href="index.html" id="menupelatihangratis"
-                  class="navbar1-link11 thq-link thq-body-small">Daftar Pelatihan Gratis</a><a href="kelas-privat.html"
-                  id="menukelasprivat" class="navbar1-link12 thq-link thq-body-small">Kelas Privat</a></div>
-            </nav>
-            <div class="navbar1-buttons"><a
-                href="https://api.whatsapp.com/send?phone=6282333155488&amp;text=Halo%20kak%2C%20Saya%20ingin%20bertanya%20mengenai%20pelatihan%20di%20*Kalingga%20Barber%20Schooling*"
-                target="_blank" rel="noreferrer noopener"
-                class="navbar1-action1 thq-button-filled thq-button-animated"><svg viewBox="0 0 877.7142857142857 1024"
-                  class="navbar1-icon">
-                  <path
-                    d="M562.857 556.571c9.714 0 102.857 48.571 106.857 55.429 1.143 2.857 1.143 6.286 1.143 8.571 0 14.286-4.571 30.286-9.714 43.429-13.143 32-66.286 52.571-98.857 52.571-27.429 0-84-24-108.571-35.429-81.714-37.143-132.571-100.571-181.714-173.143-21.714-32-41.143-71.429-40.571-110.857v-4.571c1.143-37.714 14.857-64.571 42.286-90.286 8.571-8 17.714-12.571 29.714-12.571 6.857 0 13.714 1.714 21.143 1.714 15.429 0 18.286 4.571 24 19.429 4 9.714 33.143 87.429 33.143 93.143 0 21.714-39.429 46.286-39.429 59.429 0 2.857 1.143 5.714 2.857 8.571 12.571 26.857 36.571 57.714 58.286 78.286 26.286 25.143 54.286 41.714 86.286 57.714 4 2.286 8 4 12.571 4 17.143 0 45.714-55.429 60.571-55.429zM446.857 859.429c197.714 0 358.857-161.143 358.857-358.857s-161.143-358.857-358.857-358.857-358.857 161.143-358.857 358.857c0 75.429 24 149.143 68.571 210.286l-45.143 133.143 138.286-44c58.286 38.286 127.429 59.429 197.143 59.429zM446.857 69.714c237.714 0 430.857 193.143 430.857 430.857s-193.143 430.857-430.857 430.857c-72.571 0-144.571-18.286-208.571-53.714l-238.286 76.571 77.714-231.429c-40.571-66.857-61.714-144-61.714-222.286 0-237.714 193.143-430.857 430.857-430.857z">
-                  </path>
-                </svg><span class="navbar1-text thq-body-small">WhatsApp</span></a></div>
-          </div>
-          <div data-thq="thq-burger-menu" class="navbar1-burger-menu"><svg viewBox="0 0 1024 1024"
-              class="navbar1-icon02">
-              <path
-                d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z">
-              </path>
-            </svg></div>
-          <div data-thq="thq-mobile-menu" class="navbar1-mobile-menu">
-            <div class="navbar1-nav">
-              <div class="navbar1-top"><a href="index.html" class="navbar1-navlink1"><img alt="logo"
-                    src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/PhotoRoom-20240626_100151%20white.png?updatedAt=1719403253514"
-                    class="navbar1-logo" /></a>
-                <div data-thq="thq-close-menu" class="navbar1-close-menu"><svg viewBox="0 0 1024 1024"
-                    class="navbar1-icon04">
-                    <path
-                      d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
-                    </path>
-                  </svg></div>
-              </div>
-              <div class="navbar1-container2"><a href="index.html" id="menuprofil2"
-                  class="navbar1-link13 thq-link thq-body-small">Profil</a><a href="index.html"
-                  id="menupelatihangratis2" class="navbar1-link14 thq-link thq-body-small">Daftar Pelatihan Gratis</a><a
-                  href="kelas-privat.html" id="menukelasprivat2" class="navbar1-link15 thq-link thq-body-small">Kelas
-                  Privat</a></div>
-              <div class="navbar1-buttons1"><a
-                  href="https://api.whatsapp.com/send?phone=6282333155488&amp;text=Halo%20kak%2C%20Saya%20ingin%20bertanya%20mengenai%20pelatihan%20di%20*Kalingga%20Barber%20Schooling*"
-                  target="_blank" rel="noreferrer noopener"
-                  class="navbar1-action11 thq-button-filled thq-button-animated"><svg
-                    viewBox="0 0 877.7142857142857 1024" class="navbar1-icon06">
-                    <path
-                      d="M562.857 556.571c9.714 0 102.857 48.571 106.857 55.429 1.143 2.857 1.143 6.286 1.143 8.571 0 14.286-4.571 30.286-9.714 43.429-13.143 32-66.286 52.571-98.857 52.571-27.429 0-84-24-108.571-35.429-81.714-37.143-132.571-100.571-181.714-173.143-21.714-32-41.143-71.429-40.571-110.857v-4.571c1.143-37.714 14.857-64.571 42.286-90.286 8.571-8 17.714-12.571 29.714-12.571 6.857 0 13.714 1.714 21.143 1.714 15.429 0 18.286 4.571 24 19.429 4 9.714 33.143 87.429 33.143 93.143 0 21.714-39.429 46.286-39.429 59.429 0 2.857 1.143 5.714 2.857 8.571 12.571 26.857 36.571 57.714 58.286 78.286 26.286 25.143 54.286 41.714 86.286 57.714 4 2.286 8 4 12.571 4 17.143 0 45.714-55.429 60.571-55.429zM446.857 859.429c197.714 0 358.857-161.143 358.857-358.857s-161.143-358.857-358.857-358.857-358.857 161.143-358.857 358.857c0 75.429 24 149.143 68.571 210.286l-45.143 133.143 138.286-44c58.286 38.286 127.429 59.429 197.143 59.429zM446.857 69.714c237.714 0 430.857 193.143 430.857 430.857s-193.143 430.857-430.857 430.857c-72.571 0-144.571-18.286-208.571-53.714l-238.286 76.571 77.714-231.429c-40.571-66.857-61.714-144-61.714-222.286 0-237.714 193.143-430.857 430.857-430.857z">
-                    </path>
-                  </svg><span class="navbar1-text1 thq-body-small">WhatsApp</span></a></div>
-            </div>
-            <div class="navbar1-icon-group"><svg viewBox="0 0 950.8571428571428 1024" class="thq-icon-x-small">
-                <path
-                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z">
-                </path>
-              </svg><svg viewBox="0 0 877.7142857142857 1024" class="thq-icon-x-small">
-                <path
-                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z">
-                </path>
-              </svg><svg viewBox="0 0 602.2582857142856 1024" class="thq-icon-x-small">
-                <path
-                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z">
-                </path>
-              </svg></div>
-          </div>
-        </header>
-      </header>
-      <div class="home-container01 removescroll">
-        <section id="Kalingga" class="home-hero"><img alt="logo kalingga"
-            src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/PhotoRoom-20240626_100151%20white.png?updatedAt=1719403253514"
-            data-aos="fade-up" data-aos-duration="1200" class="home-branding" /><animate-on-reveal animation="tada"
-            duration="1s" delay="2s" direction="reverse" easing="ease" iteration="100"><a href="#tentang">
-              <div data-aos="fade-up" data-aos-duration="1200" data-thq-animate-on-reveal="true"
-                class="home-get-started"><svg viewBox="0 0 1024 1024" class="home-icon">
-                  <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
-                </svg></div>
-            </a></animate-on-reveal>
-          <div data-thq="slider" data-loop="true" data-autoplay="true" data-navigation="false" data-pagination="false"
-            data-autoplay-delay="1500" data-reverse-direction="true" class="home-slider swiper">
-            <div data-thq="slider-wrapper" class="swiper-wrapper">
-              <div data-thq="slider-slide" class="home-slider-slide swiper-slide"></div>
-              <div data-thq="slider-slide" class="home-slider-slide1 swiper-slide"></div>
-              <div data-thq="slider-slide" class="home-slider-slide2 swiper-slide"></div>
-            </div>
-            <div data-thq="slider-pagination"
-              class="home-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
-              <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet swiper-pagination-bullet-active">
-              </div>
-              <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet"></div>
-              <div data-thq="slider-pagination-bullet" class="swiper-pagination-bullet"></div>
-            </div>
-            <div data-thq="slider-button-prev" class="home-slider-button-prev swiper-button-prev"></div>
-            <div data-thq="slider-button-next" class="home-slider-button-next swiper-button-next"></div>
-          </div>
-        </section>
-        <section id="tentang" class="home-hero1"><video
-            src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/kalingga%20video.mp4?updatedAt=1719487661801"
-            loop="true" autoplay="true" controls="true" playsinline="true" class="home-video"></video>
-          <div class="home-container02">
-            <div data-aos="fade-up" data-aos-duration="1200" class="home-container03">
-              <div class="home-container04"></div><span class="home-text">KALINGGA</span>
-              <div class="home-container05"></div>
-            </div><span data-aos="fade-up" data-aos-duration="1200" class="home-text01">BARBER SCHOOLING BERTUJUAN
-              UNTUK</span>
-            <div data-aos="fade-up" data-aos-duration="1200" class="home-container06">
-              <div class="point-container point-root-class-name6">
-                <div class="point-container1">
-                  <div class="point-container2"><svg viewBox="0 0 1024 1024" class="point-icon">
-                      <path
-                        d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                      </path>
-                    </svg><span class="point-text">Membangun dan membentuk SDM yg handal,berkualitas dan
-                      profesional di bidang seni rambut.</span></div>
-                  <div class="point-container3"><svg viewBox="0 0 1024 1024" class="point-icon2">
-                      <path
-                        d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                      </path>
-                    </svg><span class="point-text1"><span>Memberikan pengetahuan dan pengalaman kepada peserta
-                        di dunia seni rambut, untuk bekal suatu saat
-                        berwirausaha sendiri. </span><span> </span></span></div>
-                  <div class="point-container4"><svg viewBox="0 0 1024 1024" class="point-icon4">
-                      <path
-                        d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                      </path>
-                    </svg><span class="point-text4">Mengurangi angka pengangguran, dan memberikan
-                      kesempatan peserta yg hanya berijazah setara SMA/SMK
-                      untuk mendapatkan income atau
-                      penghasilan&nbsp;yg&nbsp;lebih&nbsp;layak.</span></div>
-                </div>
-              </div>
-            </div><a href="#Benefit" class="home-link1">
-              <div data-aos="fade-up" data-aos-duration="1200" class="home-get-started1"><svg viewBox="0 0 1024 1024"
-                  class="home-icon02">
-                  <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
-                </svg></div>
-            </a>
-          </div>
-        </section>
-        <section id="Benefit" class="home-hero2">
-          <div data-aos="fade-up" data-aos-duration="1200" class="home-container07">
-            <div class="home-container08"></div><span class="home-text02"><span class="home-text03">AYO IKUT PELATIHAN
-                BERSAMA KALINGGA</span><br class="home-text04" /><span class="home-text05">BANYAK
-                KEUNTUNGANNYA</span><br class="home-text06" /></span>
-            <div class="home-container09"></div>
-          </div><span data-aos="fade-up" data-aos-duration="1200" class="home-text07">ADA 5 KEUNTUNGAN YANG DI DAPAT DAN
-            GRATIS!</span><svg viewBox="0 0 1024 1024" class="home-icon04">
-            <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
-          </svg>
-          <div class="home-container10">
-            <div class="home-container11">
-              <div data-aos="fade-up" data-aos-duration="1200" class="point2-container point2-root-class-name"><svg
-                  viewBox="0 0 1024 1024" class="point2-icon">
-                  <path
-                    d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                  </path>
-                </svg>
-                <div class="point2-container1"><span class="point2-text"><span>Pelatihan gratis</span></span><span
-                    class="point2-text1"><span>Menerima pelatihan gratis berkualitas dari para ahli
-                      seni potong rambut, mendapatkan penghetahuan dan
-                      keterampilan dari pelatih yang berpengalaman.</span></span></div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="1200" class="point2-container point2-root-class-name4"><svg
-                  viewBox="0 0 1024 1024" class="point2-icon">
-                  <path
-                    d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                  </path>
-                </svg>
-                <div class="point2-container1"><span class="point2-text"><span>Disalurkan ke mitra kerja yang
-                      jelas</span></span><span class="point2-text1"><span>Setelah pelatihan peserta akan di salurkan ke
-                      mitra
-                      kerja yang sudah lama bekerja sama dengan
-                      KALINGGA.</span></span></div>
-              </div>
-            </div>
-            <div class="home-container12">
-              <div data-aos="fade-up" data-aos-duration="1200" class="point2-container point2-root-class-name3"><svg
-                  viewBox="0 0 1024 1024" class="point2-icon">
-                  <path
-                    d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                  </path>
-                </svg>
-                <div class="point2-container1"><span class="point2-text"><span>Mendapatkan sertifikat</span></span><span
-                    class="point2-text1"><span>Menerima sertifikat pelatihan resmi dari kalingga
-                      barber&nbsp;schooling</span></span></div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="1200" class="point2-container point2-root-class-name2"><svg
-                  viewBox="0 0 1024 1024" class="point2-icon">
-                  <path
-                    d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                  </path>
-                </svg>
-                <div class="point2-container1"><span class="point2-text"><span>Di sediakan tempat menginap saat masa
-                      pelatihan</span></span><span class="point2-text1"><span>Peserta tidak harus memikirkan tempat
-                      menginap saat
-                      masa pelatihan.</span></span></div>
-              </div>
-            </div>
-            <div class="home-container13">
-              <div data-aos="fade-up" data-aos-duration="1200" class="point2-container point2-root-class-name1"><svg
-                  viewBox="0 0 1024 1024" class="point2-icon">
-                  <path
-                    d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                  </path>
-                </svg>
-                <div class="point2-container1"><span class="point2-text"><span>Berkesempatan bergabung dengan mitra
-                      kerja kami</span></span><span class="point2-text1"><span>Berkesempatan untuk kerja bagi yang
-                      tidak/ belum
-                      mendirikan usaha sendiri.</span></span></div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="1200" class="point2-container point2-root-class-name5"><svg
-                  viewBox="0 0 1024 1024" class="point2-icon">
-                  <path
-                    d="M954.857 323.429c0 14.286-5.714 28.571-16 38.857l-491.429 491.429c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-284.571-284.571c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168.571 374.857-375.429c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857z">
-                  </path>
-                </svg>
-                <div class="point2-container1"><span class="point2-text"><span>Berkesempatan bergabung dengan mitra
-                      kerja kami</span></span><span class="point2-text1"><span>Berkesempatan untuk kerja bagi yang
-                      tidak/ belum
-                      mendirikan usaha sendiri.</span></span></div>
-              </div>
-            </div>
-          </div><a href="#Cara-daftar" class="home-link2">
-            <div data-aos="fade-up" data-aos-duration="1200" class="home-get-started2"><svg viewBox="0 0 1024 1024"
-                class="home-icon06">
-                <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
-              </svg></div>
-          </a>
-        </section>
-        <section id="Cara-daftar" class="home-hero3">
-          <div class="home-container14">
-            <div data-aos="fade-up" data-aos-duration="1200" class="home-container15">
-              <div class="home-container16">
-                <div class="home-container17">
-                  <div class="home-container18"></div><span class="home-text08">CARA PENDAFTARAN MUDAH</span>
-                  <div class="home-container19"></div>
-                </div><span class="home-text09"><span>SILAHKAN ISI FORMULIR PENDAFTARAN YANG KAMI
-                    SEDIAKAN,&nbsp;YUK SIMAK GIMANA CARA BERGABUNG BERSAMA
-                    KALINGGA DAN MENGIKUTI SEMUA PELATIHAN</span><br /></span>
-              </div><a href="#Daftar" class="home-link3">
-                <div class="home-get-started3"><svg viewBox="0 0 1024 1024" class="home-icon08">
-                    <path d="M316 366l196 196 196-196 60 60-256 256-256-256z"></path>
-                  </svg></div>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section id="Daftar" class="home-hero4">
-          <div class="home-container20">
-            <div class="home-container21"><img alt="pastedImage"
-                src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/PhotoRoom-20240626_100151%20white.png?updatedAt=1719403253514"
-                data-aos="fade-up" data-aos-duration="1200" class="home-branding1" /><span data-aos="fade-up"
-                data-aos-duration="1200" class="home-text12"><span>FORMULIR PENDAFTARAN</span><br /></span>
-              <div data-aos="fade-up" data-aos-duration="1200" class="home-container22">
-                <div class="home-container23"><span class="home-text15"><span class="home-text16">team
-                      kalingga</span><span> dapat menghubungi kamu.</span><span>Pastikan isi data kamu di form di bawah
-                      ini, jangan
-                      lupa kirimkan nomor WhatsApp kamu&nbsp; agar kami dari </span><span> </span></span></div>
-                <form name="contact-form"
-                  action="https://script.google.com/macros/s/AKfycbwFknh59PkLq2GDyKXj07VLsSKMZmO4Wg3LmvAllCceXLG0m_SaeC-Fiq7Hm-CQN3o-tg/exec"
-                  method="POST" class="home-form">
-                  <div>
-                    <div class="home-container25">
-                      <style>
-                        input::placeholder {
-                          color: #ffffff;
-                        }
-                      </style>
-                    </div>
-                  </div>
-                  <div class="home-container26">
-                    <div class="home-container27"><span class="home-text20">Nama</span><input type="text" name="nama"
-                        required="true" placeholder="Nama" class="home-textinput" /></div>
-                    <div class="home-container28"><span class="home-text21">Alamat</span><input type="text"
-                        name="alamat" required="true" placeholder="Alamat" class="home-textinput1" /></div>
-                  </div>
-                  <div class="home-container29">
-                    <div class="home-container30"><span class="home-text22">Nomor WhatsApp</span><input type="number"
-                        name="nomor-whatsapp" required="true" placeholder="WhatsApp +62XXXXXXX"
-                        class="home-textinput2" /></div>
-                    <div class="home-container31"><span class="home-text23">Usia</span><input type="number" name="usia"
-                        target="usia" required="true" placeholder="Usia" class="home-textinput3" /></div>
-                  </div>
-                  <div class="home-container32"><span class="home-text24">Pendidikan terakhir</span><select
-                      name="pendidikan-terakhir" required="true" class="home-select">
-                      <option value="SMA" class="home-option1">SMA</option>
-                      <option value="SMK" class="home-option2">SMK</option>
-                      <option value="D3" class="home-option3">D3</option>
-                      <option value="D4" class="home-option4">D4</option>
-                      <option value="S1" class="home-option5">S1</option>
-                    </select></div>
-                  <div class="home-container33"><span class="home-text25">Pengalaman kerja terakhir </span><span
-                      class="home-text26">**Contoh, Tahun 2020, Saya bekerja sebagai
-                      barista</span><input type="text" name="riwayat-kerja" target="usia" required="true"
-                      placeholder="Pekerjaan Sebelumnya" class="home-textinput4" /></div>
-                  <div class="home-container34"><span class="home-text27">Punya pengalaman potong rambut?</span><select
-                      name="pengalaman-potong" required="true" class="home-select1">
-                      <option value="IYA, ADA PENGALAMAN" class="home-option6">IYA, ADA PENGALAMAN</option>
-                      <option value="TIDAK ADA PENGALAMAN" class="home-option7">TIDAK ADA PENGALAMAN</option>
-                    </select></div>
-                  <div class="home-container35"><input type="checkbox" required="true" class="home-checkbox" /><span
-                      class="home-text28">Mempercayakan kepada kalingga untuk mengelola data
-                      anda?</span></div>
-                  <div class="home-container36"><input type="checkbox" required="true" class="home-checkbox1" /><span
-                      class="home-text29">Bersedia mengikuti pelatihan hingga selesai</span></div><button id="submit"
-                    type="submit" value="Submit" class="home-button">DAFTAR GRATIS SEKARANG</button><span
-                    id="status-message" class="home-text30">Status</span>
-                  <div>
-                    <div class="home-container38">
-                      <script src="Google Sheet.js"></script>
-                      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="home-container39">
-                <div>
-                </div>
-                <marquee>
-                  <div class="home-container42"><span class="home-text31"><span>Tidak di pungut biaya </span><span
-                        class="home-text33">(GRATIS)</span><span> sampai pelatihan</span></span>
-                  </div>
-              </div>
-                  <div class="home-container44"></div>
-              </div>
-              </marquee>
-            </div>
-          </div>
-      </div><a href="#Kalingga" class="home-link4">
-        <div class="home-container45"><svg viewBox="0 0 1024 1024" class="home-icon10">
-            <path d="M316 658l-60-60 256-256 256 256-60 60-196-196z"></path>
-          </svg></div>
-      </a>
-      </section>
-      <div id="kelas-privat" class="home-container46">
-        <div data-aos="fade-up" data-aos-duration="1200" class="home-container47">
-          <div class="home-container48"><img id="kelas privat" alt="kelas privat"
-              src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/pexels-photo-2040189.jpeg_auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1?updatedAt=1719441508173"
-              loading="lazy" class="home-image" />
-            <div class="home-container49">
-              <div class="home-container50">
-                <div class="home-container51"><span class="home-text39">KELAS PRIVAT BERBAYAR</span></div><span
-                  class="home-text40">Kami juga menyediakan pelatihan kelas privat berbayar,
-                  untuk info lebih lengkap
-                  klik&nbsp;tombol&nbsp;di&nbsp;sini</span>
-              </div><animate-on-reveal animation="tada" duration="1s" delay="3s" direction="reverse"
-                easing="ease-in-out" iteration="100"><a href="kelas-privat.html">
-                  <div data-thq-animate-on-reveal="true" class="home-get-started4"><svg viewBox="0 0 1024 1024"
-                      class="home-icon12">
-                      <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
-                    </svg><span class="home-text41">GABUNG DI KELAS PRIVAT</span><svg viewBox="0 0 1024 1024"
-                      class="home-icon14">
-                      <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
-                    </svg></div>
-                </a></animate-on-reveal>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="home-container52">
-      <div class="home-container53"></div>
-    </div>
-    <div class="home-container54"><span class="home-text42">Bagikan ke teman dekatmu, agar mereka tahu ✨</span>
-      <div class="home-container55">
-        <div id="shareBtn" class="home-container56"><svg viewBox="0 0 1024 1024" class="home-icon16">
-            <path
-              d="M873 148.8c-95.8-96-223.2-148.8-359-148.8-279.6 0-507.2 227.6-507.2 507.4 0 89.4 23.4 176.8 67.8 253.6l-72 263 269-70.6c74.2 40.4 157.6 61.8 242.4 61.8h0.2c0 0 0 0 0 0 279.6 0 507.4-227.6 507.4-507.4 0-135.6-52.8-263-148.6-359zM514.2 929.6v0c-75.8 0-150-20.4-214.8-58.8l-15.4-9.2-159.6 41.8 42.6-155.6-10-16c-42.4-67-64.6-144.6-64.6-224.4 0-232.6 189.2-421.8 422-421.8 112.6 0 218.6 44 298.2 123.6 79.6 79.8 123.4 185.6 123.4 298.4-0.2 232.8-189.4 422-421.8 422zM745.4 613.6c-12.6-6.4-75-37-86.6-41.2s-20-6.4-28.6 6.4c-8.4 12.6-32.8 41.2-40.2 49.8-7.4 8.4-14.8 9.6-27.4 3.2s-53.6-19.8-102-63c-37.6-33.6-63.2-75.2-70.6-87.8s-0.8-19.6 5.6-25.8c5.8-5.6 12.6-14.8 19-22.2s8.4-12.6 12.6-21.2c4.2-8.4 2.2-15.8-1-22.2s-28.6-68.8-39-94.2c-10.2-24.8-20.8-21.4-28.6-21.8-7.4-0.4-15.8-0.4-24.2-0.4s-22.2 3.2-33.8 15.8c-11.6 12.6-44.4 43.4-44.4 105.8s45.4 122.6 51.8 131.2c6.4 8.4 89.4 136.6 216.6 191.4 30.2 13 53.8 20.8 72.2 26.8 30.4 9.6 58 8.2 79.8 5 24.4-3.6 75-30.6 85.6-60.2s10.6-55 7.4-60.2c-3-5.6-11.4-8.8-24.2-15.2z">
-            </path>
-          </svg><span class="home-text43">Bagikan via WhatsApp</span></div>
-      </div>
-      <div>
-        <div class="home-container58">
-          <script src="share.js"></script>
-        </div>
-      </div><span class="home-text44">Ikuti sosial media kami</span>
-      <div class="home-container59"><a href="https://www.facebook.com/profile.php?id=61562168012106&amp;mibextid=ZbWKwL"
-          target="_blank" rel="noreferrer noopener" class="home-link5"><svg id="facebook"
-            viewBox="0 0 877.7142857142857 1024" class="home-icon18">
-            <path
-              d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z">
-            </path>
-          </svg></a><a
-          href="https://www.instagram.com/kalinggabarberschool?utm_source=qr&igsh=eWx4OXdjb2d4aXpm"
-          target="_blank" rel="noreferrer noopener" class="home-link6"><svg id="instagram"
-            viewBox="0 0 877.7142857142857 1024" class="home-icon20">
-            <path
-              d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z">
-            </path>
-          </svg></a></div>
-    </div>
-    <footer class="footer-footer footer-root-class-name"><img alt="pastedImage"
-        src="https://ik.imagekit.io/3ij6aly19/Kalingga/Logo/PhotoRoom-20240626_100151%20white.png?updatedAt=1719403253514"
-        class="footer-branding" />
-      <div class="footer-bottom">
-        <div class="footer-container"><span class="footer-text">Informasi usaha</span><span
-            class="footer-text01">Sekolah Barbershop dan pengembangan barbershop</span></div>
-        <div class="footer-container1">
-          <div class="footer-container2"><span class="footer-text02">Kantor pusat</span><span class="footer-text03">Jl.
-              Kapten Tendean No.112 Ngronggo kota Kediri</span></div>
-          <div class="footer-container3"><iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.4680335934036!2d112.0300108!3d-7.845984100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78579135be87ed%3A0xa0cf87d8c3cb28f9!2sJl.%20Kapten%20Tendean%20No.112%2C%20Ngronggo%2C%20Kec.%20Kota%2C%20Kabupaten%20Kediri%2C%20Jawa%20Timur%2064129!5e0!3m2!1sen!2sid!4v1719453205339!5m2!1sen!2sid"
-              allowfullscreen="true" class="footer-iframe"></iframe><a href="https://maps.app.goo.gl/FBy2teFGRB3hvsam9"
-              target="_blank" rel="noreferrer noopener" class="footer-link">
-              <div id="button-maps" class="footer-get-started"><span class="footer-text04">Lihat lokasi -&gt;</span>
-              </div>
-            </a></div>
-        </div>
-        <div class="footer-container4">
-          <div class="footer-container5"><span class="footer-text05">Kontak</span><span class="footer-text06">0823
-              3315 5488</span></div><a
-            href="https://api.whatsapp.com/send?phone=6282333155488&amp;text=Halo%20kak%2C%20Saya%20ingin%20bertanya%20mengenai%20pelatihan%20di%20*Kalingga%20Barber%20Schooling*"
-            target="_blank" rel="noreferrer noopener" class="footer-link1">
-            <div class="footer-get-started1"><span class="footer-text07"><span>WhatsApp</span></span></div>
-          </a>
-          <div class="footer-container6"><span class="footer-text08">Ikuti sosial media kami</span>
-            <div class="footer-container7"><a
-                href="https://www.facebook.com/profile.php?id=61562168012106&amp;mibextid=ZbWKwL" target="_blank"
-                rel="noreferrer noopener" class="footer-link2"><svg id="facebook" viewBox="0 0 877.7142857142857 1024"
-                  class="footer-icon">
-                  <path
-                    d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z">
-                  </path>
-                </svg></a><a
-                href="https://www.instagram.com/kalinggabarberschool?utm_source=qr&igsh=eWx4OXdjb2d4aXpm"
-                target="_blank" rel="noreferrer noopener" class="footer-link3"><svg id="instagram"
-                  viewBox="0 0 877.7142857142857 1024" class="footer-icon2">
-                  <path
-                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z">
-                  </path>
-                </svg></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom1">
-        <div class="footer-container8"><span class="footer-text09"><span>© Kalingga Barber Schooling -
-              2024</span></span></div>
-      </div>
-    </footer>
-  </div>
-  </div>
-  <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-TD2FT5TDTT" async=""></script>
-  <script type="text/javascript">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-TD2FT5TDTT');</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();</script>
-  <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
-  <script defer="" src="https://unpkg.com/@teleporthq/react-components/dist/animate-on-reveal.umd.js"></script>
-</body>
-
-</html>
+        window.addEventListener('resize', () => { resizeCanvas(); init(); });
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            type();
+            if(canvas) {
+                resizeCanvas();
+                init();
+                animate();
+            }
+        });
+    </script><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/Form/formdaftar.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script></body></html>
