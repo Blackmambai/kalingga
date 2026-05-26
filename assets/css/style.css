@@ -1,0 +1,89 @@
+:root {
+  --gold: #c59d5f;
+  --dark-bg: #111111;
+  --card-bg: #1a1a1a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-bg);
+  color: #e0e0e0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--dark-bg);
+}
+
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.typing-text {
+  color: var(--gold);
+  min-height: 50px;
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--dark-bg);
+  border-color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #d4ac75;
+  border-color: #d4ac75;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(197, 157, 95, 0.2);
+}
+
+.section-title {
+  color: var(--gold);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-dark-2 {
+  background-color: #000;
+}
+
